@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<! DOCTYPE sqlMapConfig
-PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
-"http://www.ibatis.com/dtd/sql-map-config-2.dtd" >
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<environments default="development">
 		<environment id="development">
-			<trsactionManager type="JDBC" />
+			<transactionManager type="JDBC" />
+			
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver" />
-				<property name="url" value="jdbc:mysql://localhost:3306/mybatis?charactor=UTF-8" />
-				<property name="username" value="" />
-				<property name="password" value="" />
+				<property name="url" value="jdbc:mysql://localhost:3306/mysql?characterEncoding=UTF-8" />
+				<property name="username" value="root" />
+				<property name="password" value="tu18503049916" />
 			</dataSource>
 		</environment>
 	</environments>
+	<mappers>
+		<mapper resource="sqlmap/StudentMapper.xml"></mapper>
+	</mappers>
 </configuration>
